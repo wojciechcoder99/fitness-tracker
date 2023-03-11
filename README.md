@@ -1,5 +1,6 @@
 # Fitness Tracker
 Technologies: Angular, Angular Material, Angularfire (+ Firebase with Firestore) and NgRx
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
 ## Development server
