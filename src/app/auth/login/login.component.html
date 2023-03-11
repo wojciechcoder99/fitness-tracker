@@ -1,0 +1,40 @@
+<section>
+  <h1 class="header">Fitness Tracker</h1>
+  <section class="signup-form" fxLayoutAlign="center center">
+    <form fxLayout="column" fxLayoutGap="5px" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label class="sign-in-header">Sign in</label>
+      <label>Trace your progress with us!</label>
+      <mat-form-field appearance="outline">
+        <input
+          type="email"
+          matInput
+          placeholder="Email"
+          formControlName="email">
+        <mat-error class="mat-error">Please input email!</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input
+          matInput [type]="hide ? 'password' : 'text'"
+          placeholder="Password"
+          formControlName="password"
+          name="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="getPasswordField().hasError('required')">Please specify password</mat-error>
+      </mat-form-field>
+      <button mat-button color="primary" class="btn-forgot-password">Forgot password?</button>
+    <button mat-raised-button color="primary" class="btn-sign-in" [disabled]="!loginForm.valid"
+      >Sign in</button>
+      <label class="or-splitter">
+        <span>or</span>
+      </label>
+      <button
+        mat-raised-button
+        class="btn-sign-in btn-sign-in-with"
+      >
+        Sign in with Google
+      </button>
+    </form>
+  </section>
+</section>

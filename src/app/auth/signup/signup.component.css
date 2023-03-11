@@ -1,0 +1,8 @@
+mat-form-field {
+  width: 300px;
+}
+
+mat-checkbox {
+  background-color: dimgrey;
+  width: 300px;
+}

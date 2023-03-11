@@ -1,0 +1,44 @@
+.header {
+  font-weight: bold;
+  color: dodgerblue;
+  margin: 10px 10px;
+}
+form {
+  width: 300px;
+}
+.sign-in-header {
+  font-size: 30px;
+  font-weight: bold;
+}
+.btn-forgot-password {
+  margin-top: -25px;
+  display: flex;
+  justify-content: flex-start;
+}
+.or-splitter {
+  display: flex;
+  flex-direction: row;
+}
+.or-splitter:before,.or-splitter:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid lightgray;
+  margin: auto;
+}
+.or-splitter:before {
+  margin-right: 10px
+}
+.or-splitter:after {
+  margin-left: 10px
+}
+.btn-sign-in {
+  border-radius: 50px;
+  height: 50px;
+}
+.btn-sign-in-with {
+  background-color: white;
+  border: 1px solid black;
+}
+.mat-error {
+  margin-bottom: 20px;
+}
